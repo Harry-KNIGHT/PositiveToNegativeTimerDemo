@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TimerView.swift
 //  PositiveToNegativeTimerDemo
 //
 //  Created by Elliot Knight on 05/10/2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TimerView: View {
 
 	var timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
 	@State private var timeRemaining: Int = 5
@@ -50,9 +50,9 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct TimerView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		TimerView()
 	}
 }
 
