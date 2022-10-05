@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-struct TimeParts {
-	var seconds = 0
-	var minutes = 0
-	/// The string representation of the time parts (ex: 01:23)
-	var description: String {
-		return NSString(format: "%02d:%02d", minutes, seconds) as String
-	}
-}
-
 struct ContentView: View {
 
 	var timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
@@ -26,47 +17,17 @@ struct ContentView: View {
 		VStack(spacing: 15) {
 			Text(countDownValueWasZero ? "Extra time" : "Keep going")
 
-
 			HStack(alignment: .center, spacing: 1) {
 				if countDownValueWasZero {
 					Text("+")
 				}
-				Text(String(timeRemaining.toTimeParts().description))
+				Text(String(convertSecondToTime(timeInSeconds: timeRemaining)))
 			}
 
-			HStack {
-				Button(action: {
-					startAndPauseCountDown.toggle()
-
-				}, label: {
-					Image(systemName: startAndPauseCountDown ? "pause.circle.fill" : "play.circle.fill")
-
-						.font(.largeTitle)
-				})
-
-
-				if startAndPauseCountDown  {
-					Button(action: {
-						timeRemaining = 5
-						startAndPauseCountDown = false
-						countDownValueWasZero = false
-
-					}, label: {
-						Image(systemName: "clock.arrow.2.circlepath")
-							.font(.largeTitle)
-							.foregroundColor(.red)
-					})
-				}
-			}
+			ButtonsView(startAndPauseCountDown: $startAndPauseCountDown, countDownValueWasZero: $countDownValueWasZero, timeRemaining: $timeRemaining)
 		}
-		.font(.title2)
-		.padding(30)
-		.frame(width: 180)
+		.modifier(TimeRemainingViewModifier())
 
-		.background(.regularMaterial.shadow(.inner(color: .gray, radius: 10)))
-
-
-		.cornerRadius(10)
 		.onReceive(timer) { time in
 			if !countDownValueWasZero && startAndPauseCountDown  {
 				if timeRemaining > 0 {
@@ -79,20 +40,12 @@ struct ContentView: View {
 			}
 		}
 	}
-}
 
-extension Int {
-	func toTimeParts() -> TimeParts {
-		let seconds = self
-		var mins = 0
+	func convertSecondToTime(timeInSeconds: Int) -> String {
+		let minutes = timeInSeconds / 60
+		let seconds = timeInSeconds % 60
 
-		var secs = seconds
-		if seconds >= 60 {
-			mins = Int(seconds / 60)
-			secs = seconds - (mins * 60)
-		}
-
-		return TimeParts(seconds: secs, minutes: mins)
+		return String(format: "%02d:%02d", minutes, seconds)
 	}
 }
 
@@ -103,3 +56,13 @@ struct ContentView_Previews: PreviewProvider {
 	}
 }
 
+struct TimeRemainingViewModifier: ViewModifier {
+	func body(content: Content) -> some View {
+		content
+			.font(.title2)
+			.padding(30)
+			.frame(width: 180)
+			.background(.regularMaterial.shadow(.inner(color: .gray, radius: 10)))
+			.cornerRadius(10)
+	}
+}
