@@ -10,7 +10,7 @@ import SwiftUI
 struct TimerView: View {
 
 	var timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
-	@State private var timeRemaining: Int = 5
+	@Binding var timeRemaining: Int 
 	@State private var startAndPauseCountDown = false
 	@State private var countDownValueWasZero = false
 	var body: some View {
@@ -52,7 +52,7 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
 	static var previews: some View {
-		TimerView()
+		TimerView(timeRemaining: .constant(5))
 	}
 }
 

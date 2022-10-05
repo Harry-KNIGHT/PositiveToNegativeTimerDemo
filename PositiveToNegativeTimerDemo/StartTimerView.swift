@@ -19,7 +19,7 @@ struct StartTimerView: View {
 					}
 				}
 
-				NavigationLink(destination: TimerView(), isActive: $isNavigationActive) {
+				NavigationLink(destination: TimerView(timeRemaining: $timeSelected), isActive: $isNavigationActive) {
 					Button("Go to second view") {
 						isNavigationActive = true
 					}
