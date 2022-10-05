@@ -13,6 +13,7 @@ struct TimerView: View {
 	@Binding var timeRemaining: Int 
 	@State private var startAndPauseCountDown = false
 	@State private var countDownValueWasZero = false
+	@StateObject var convertTimeVm = ConvertTimeViewModel()
 	var body: some View {
 		VStack(spacing: 15) {
 			Text(countDownValueWasZero ? "Extra time" : "Keep going")
@@ -21,7 +22,7 @@ struct TimerView: View {
 				if countDownValueWasZero {
 					Text("+")
 				}
-				Text(String(convertSecondToTime(timeInSeconds: timeRemaining)))
+				Text(String(convertTimeVm.convertSecondToTime(timeInSeconds: timeRemaining)))
 			}
 
 			ButtonsView(startAndPauseCountDown: $startAndPauseCountDown, countDownValueWasZero: $countDownValueWasZero, timeRemaining: $timeRemaining)
@@ -39,13 +40,6 @@ struct TimerView: View {
 				timeRemaining += 1
 			}
 		}
-	}
-
-	func convertSecondToTime(timeInSeconds: Int) -> String {
-		let minutes = timeInSeconds / 60
-		let seconds = timeInSeconds % 60
-
-		return String(format: "%02d:%02d", minutes, seconds)
 	}
 }
 

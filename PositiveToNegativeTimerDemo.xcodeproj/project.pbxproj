@@ -14,6 +14,7 @@
 		3C8DD1F428EE0F3600C5DA63 /* TimePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DD1F328EE0F3600C5DA63 /* TimePart.swift */; };
 		3C8DD1F628EE0F5200C5DA63 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DD1F528EE0F5200C5DA63 /* ButtonsView.swift */; };
 		3CB3B18C28EE165A009E4243 /* StartTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3B18B28EE165A009E4243 /* StartTimerView.swift */; };
+		3CB3B18E28EE199F009E4243 /* ConvertTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3B18D28EE199F009E4243 /* ConvertTimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3C8DD1F328EE0F3600C5DA63 /* TimePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePart.swift; sourceTree = "<group>"; };
 		3C8DD1F528EE0F5200C5DA63 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		3CB3B18B28EE165A009E4243 /* StartTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerView.swift; sourceTree = "<group>"; };
+		3CB3B18D28EE199F009E4243 /* ConvertTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTimeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				3C8DD1DB28ED8CBD00C5DA63 /* PositiveToNegativeTimerDemoApp.swift */,
-				3C8DD1DD28ED8CBD00C5DA63 /* TimerView.swift */,
-				3CB3B18B28EE165A009E4243 /* StartTimerView.swift */,
-				3C8DD1F528EE0F5200C5DA63 /* ButtonsView.swift */,
+				3CB3B18F28EE1FB0009E4243 /* Views */,
+				3CB3B18D28EE199F009E4243 /* ConvertTimeViewModel.swift */,
 				3C8DD1F328EE0F3600C5DA63 /* TimePart.swift */,
 				3C8DD1DF28ED8CBF00C5DA63 /* Assets.xcassets */,
 				3C8DD1E128ED8CBF00C5DA63 /* Preview Content */,
@@ -74,6 +75,16 @@
 				3C8DD1E228ED8CBF00C5DA63 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3CB3B18F28EE1FB0009E4243 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C8DD1DD28ED8CBD00C5DA63 /* TimerView.swift */,
+				3CB3B18B28EE165A009E4243 /* StartTimerView.swift */,
+				3C8DD1F528EE0F5200C5DA63 /* ButtonsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C8DD1F428EE0F3600C5DA63 /* TimePart.swift in Sources */,
+				3CB3B18E28EE199F009E4243 /* ConvertTimeViewModel.swift in Sources */,
 				3C8DD1DE28ED8CBD00C5DA63 /* TimerView.swift in Sources */,
 				3CB3B18C28EE165A009E4243 /* StartTimerView.swift in Sources */,
 				3C8DD1F628EE0F5200C5DA63 /* ButtonsView.swift in Sources */,
