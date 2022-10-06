@@ -14,4 +14,8 @@ class ConvertTimeViewModel: ObservableObject {
 		print(seconds)
 		return String(format: "%02d:%02d", minutes, seconds)
 	}
+
+	func convertTimeSelectedInSecondsToMinutes(timeInSeconds: Int) -> Int {
+		return (timeInSeconds * 60)
+	}
 }

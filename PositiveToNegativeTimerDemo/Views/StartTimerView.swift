@@ -14,20 +14,28 @@ struct StartTimerView: View {
     var body: some View {
 		NavigationView {
 			VStack {
-				Picker("Select time", selection: $timeSelected) {
-					ForEach(1...20, id: \.self) { number in
-						Text(String(number) + "min")
+				HStack {
+					Text("Session time")
+					Picker("Select session time", selection: $timeSelected) {
+						ForEach(1...60, id: \.self) { number in
+							Text(String(number) + "min")
+						}
 					}
+					.padding(6)
+
+					.background(.regularMaterial)
+					.cornerRadius(10)
 				}
 
 				NavigationLink(destination: TimerView(timeRemaining: $timeSelected), isActive: $isNavigationActive) {
-					Button("Go to second view") {
+					Button("Start Session !") {
 						isNavigationActive = true
 					}
 					.buttonStyle(.borderedProminent)
 					.buttonBorderShape(.roundedRectangle)
 				}
 			}
+			.modifier(TimeRemainingViewModifier())
 		}
     }
 }
@@ -37,3 +45,4 @@ struct StartTimerView_Previews: PreviewProvider {
         StartTimerView()
     }
 }
+
