@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct ButtonsView: View {
-
 	@Binding var startAndPauseCountDown: Bool
-	@Binding var countDownValueWasZero: Bool
 	@Binding var timeRemaining: Int
 
 	var body: some View {
@@ -24,12 +22,11 @@ struct ButtonsView: View {
 					.font(.largeTitle)
 			})
 
-
 			if startAndPauseCountDown  {
 				Button(action: {
 					timeRemaining = 5
 					startAndPauseCountDown = false
-					countDownValueWasZero = false
+
 
 				}, label: {
 					Image(systemName: "clock.arrow.2.circlepath")
@@ -43,6 +40,6 @@ struct ButtonsView: View {
 
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-		ButtonsView(startAndPauseCountDown: .constant(false), countDownValueWasZero: .constant(false), timeRemaining: .constant(5))
+		ButtonsView(startAndPauseCountDown: .constant(false), timeRemaining: .constant(5))
     }
 }

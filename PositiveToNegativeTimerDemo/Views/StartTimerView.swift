@@ -9,7 +9,8 @@ import SwiftUI
 
 struct StartTimerView: View {
 	@State private var isNavigationActive: Bool = false
-	@State private var timeSelected: Int = 10 
+	@State private var timeSelected: Int = 10
+
     var body: some View {
 		NavigationView {
 			VStack {

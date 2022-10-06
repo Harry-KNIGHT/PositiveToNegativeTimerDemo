@@ -80,8 +80,8 @@
 		3CB3B18F28EE1FB0009E4243 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3C8DD1DD28ED8CBD00C5DA63 /* TimerView.swift */,
 				3CB3B18B28EE165A009E4243 /* StartTimerView.swift */,
+				3C8DD1DD28ED8CBD00C5DA63 /* TimerView.swift */,
 				3C8DD1F528EE0F5200C5DA63 /* ButtonsView.swift */,
 			);
 			path = Views;
