@@ -10,11 +10,13 @@ import SwiftUI
 struct StartTimerView: View {
 	@State private var isNavigationActive: Bool = false
 	@State private var timeSelected: Int = 10
-
+	@EnvironmentObject var convertVM: ConvertTimeViewModel
     var body: some View {
 		NavigationView {
 			VStack {
+				Text("\(timeSelected)min =  \(convertVM.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeSelected))secs")
 				HStack {
+
 					Text("Session time")
 					Picker("Select session time", selection: $timeSelected) {
 						ForEach(1...60, id: \.self) { number in
@@ -43,6 +45,7 @@ struct StartTimerView: View {
 struct StartTimerView_Previews: PreviewProvider {
     static var previews: some View {
         StartTimerView()
+			.environmentObject(ConvertTimeViewModel())
     }
 }
 

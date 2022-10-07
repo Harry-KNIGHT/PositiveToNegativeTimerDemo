@@ -13,31 +13,29 @@ struct TimerView: View {
 	@Binding var timeRemaining: Int
 	@State private var startAndPauseCountDown = true
 	@StateObject var convertTimeVm = ConvertTimeViewModel()
-	@State private var startSession = 0
-	@State private var isExtaTime = false
+	@State private var startSession = 58
 
 	var body: some View {
 		VStack(spacing: 15) {
-			Text(timeRemaining < startSession ? "Extra time" : "Keep going")
+			Text((convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining) > startSession) ? "Keep going" : "Extra time")
 
 			HStack(alignment: .center, spacing: 1) {
-				if isExtaTime  {
+				if (convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining) < startSession)  {
 					Text("+")
 				}
 				Text(String(convertTimeVm.convertSecondToTime(timeInSeconds: startSession)))
 			}
+			.foregroundColor(convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining) > startSession ? .white : .green)
 
 			ButtonsView(startAndPauseCountDown: $startAndPauseCountDown, timeRemaining: $timeRemaining, resetTimeSelected: $timeRemaining)
+
+			Text("\(String(convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining))) session objectif" )
+			Text("\(startSession) session time")
 		}
 		.modifier(TimeRemainingViewModifier())
 		.onReceive(timer) { time in
 			if startAndPauseCountDown  {
 				startSession += 1
-			}
-		}
-		.task {
-			if convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining) < startSession {
-				isExtaTime = true
 			}
 		}
 	}
