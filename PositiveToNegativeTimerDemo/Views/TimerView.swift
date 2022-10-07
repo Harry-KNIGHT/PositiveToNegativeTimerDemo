@@ -29,8 +29,8 @@ struct TimerView: View {
 
 			ButtonsView(startAndPauseCountDown: $startAndPauseCountDown, timeRemaining: $timeRemaining, resetTimeSelected: $timeRemaining)
 
-			Text("\(String(convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining))) session objectif" )
-			Text("\(startSession) session time")
+			Text("\(String(convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining)))s session objectif" )
+			Text("\(startSession)s session time")
 		}
 		.modifier(TimeRemainingViewModifier())
 		.onReceive(timer) { time in

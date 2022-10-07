@@ -10,7 +10,7 @@ import SwiftUI
 struct StartTimerView: View {
 	@State private var isNavigationActive: Bool = false
 	@State private var timeSelected: Int = 10
-	@EnvironmentObject var convertVM: ConvertTimeViewModel
+	@StateObject var convertVM = ConvertTimeViewModel()
     var body: some View {
 		NavigationView {
 			VStack {

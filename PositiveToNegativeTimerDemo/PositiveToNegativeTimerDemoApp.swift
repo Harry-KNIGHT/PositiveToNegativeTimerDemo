@@ -13,7 +13,6 @@ struct PositiveToNegativeTimerDemoApp: App {
     var body: some Scene {
         WindowGroup {
             StartTimerView()
-				.environmentObject(converterVM)
         }
     }
 }
