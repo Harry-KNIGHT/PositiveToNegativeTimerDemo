@@ -27,7 +27,7 @@ struct TimerView: View {
 			}
 			.foregroundColor(convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining) > startSession ? .white : .green)
 
-			ButtonsView(startAndPauseCountDown: $startAndPauseCountDown, timeRemaining: $timeRemaining, resetTimeSelected: $timeRemaining)
+			ButtonsView(startAndPauseCountDown: $startAndPauseCountDown, timeRemaining: $timeRemaining)
 
 			Text("\(String(convertTimeVm.convertTimeSelectedInSecondsToMinutes(timeInSeconds: timeRemaining)))s session objectif" )
 			Text("\(startSession)s session time")

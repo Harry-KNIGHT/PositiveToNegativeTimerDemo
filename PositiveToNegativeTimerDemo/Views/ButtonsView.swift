@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonsView: View {
 	@Binding var startAndPauseCountDown: Bool
 	@Binding var timeRemaining: Int
-	@Binding var resetTimeSelected: Int
+
 	
 	var body: some View {
 		HStack {
@@ -28,6 +28,6 @@ struct ButtonsView: View {
 
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-		ButtonsView(startAndPauseCountDown: .constant(false), timeRemaining: .constant(5), resetTimeSelected: .constant(22))
+		ButtonsView(startAndPauseCountDown: .constant(false), timeRemaining: .constant(5))
     }
 }
