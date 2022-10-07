@@ -22,19 +22,6 @@ struct ButtonsView: View {
 
 					.font(.largeTitle)
 			})
-
-			if startAndPauseCountDown  {
-				Button(action: {
-					timeRemaining = 0
-					startAndPauseCountDown = false
-
-
-				}, label: {
-					Image(systemName: "clock.arrow.2.circlepath")
-						.font(.largeTitle)
-						.foregroundColor(.red)
-				})
-			}
 		}
 	}
 }
