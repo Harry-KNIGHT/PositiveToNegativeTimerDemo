@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2BA85628F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BA85528F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.swift */; };
 		3C8DD1DC28ED8CBD00C5DA63 /* PositiveToNegativeTimerDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DD1DB28ED8CBD00C5DA63 /* PositiveToNegativeTimerDemoApp.swift */; };
 		3C8DD1DE28ED8CBD00C5DA63 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DD1DD28ED8CBD00C5DA63 /* TimerView.swift */; };
 		3C8DD1E028ED8CBF00C5DA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DD1DF28ED8CBF00C5DA63 /* Assets.xcassets */; };
@@ -17,7 +18,19 @@
 		3CB3B18E28EE199F009E4243 /* ConvertTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB3B18D28EE199F009E4243 /* ConvertTimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3C2BA85728F15E7C00BBB215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C8DD1D028ED8CBD00C5DA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C8DD1D728ED8CBD00C5DA63;
+			remoteInfo = PositiveToNegativeTimerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3C2BA85328F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositiveToNegativeTimerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2BA85528F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveToNegativeTimerDemoTests.swift; sourceTree = "<group>"; };
 		3C8DD1D828ED8CBD00C5DA63 /* PositiveToNegativeTimerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositiveToNegativeTimerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8DD1DB28ED8CBD00C5DA63 /* PositiveToNegativeTimerDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositiveToNegativeTimerDemoApp.swift; sourceTree = "<group>"; };
 		3C8DD1DD28ED8CBD00C5DA63 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -30,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C2BA85028F15E7C00BBB215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C8DD1D528ED8CBD00C5DA63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2BA85428F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C2BA85528F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.swift */,
+			);
+			path = PositiveToNegativeTimerDemoTests;
+			sourceTree = "<group>";
+		};
 		3C8DD1CF28ED8CBD00C5DA63 = {
 			isa = PBXGroup;
 			children = (
 				3C8DD1DA28ED8CBD00C5DA63 /* PositiveToNegativeTimerDemo */,
+				3C2BA85428F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests */,
 				3C8DD1D928ED8CBD00C5DA63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				3C8DD1D828ED8CBD00C5DA63 /* PositiveToNegativeTimerDemo.app */,
+				3C2BA85328F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +120,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3C2BA85228F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C2BA85B28F15E7C00BBB215 /* Build configuration list for PBXNativeTarget "PositiveToNegativeTimerDemoTests" */;
+			buildPhases = (
+				3C2BA84F28F15E7C00BBB215 /* Sources */,
+				3C2BA85028F15E7C00BBB215 /* Frameworks */,
+				3C2BA85128F15E7C00BBB215 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C2BA85828F15E7C00BBB215 /* PBXTargetDependency */,
+			);
+			name = PositiveToNegativeTimerDemoTests;
+			productName = PositiveToNegativeTimerDemoTests;
+			productReference = 3C2BA85328F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3C8DD1D728ED8CBD00C5DA63 /* PositiveToNegativeTimerDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C8DD1E628ED8CBF00C5DA63 /* Build configuration list for PBXNativeTarget "PositiveToNegativeTimerDemo" */;
@@ -117,6 +165,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					3C2BA85228F15E7C00BBB215 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 3C8DD1D728ED8CBD00C5DA63;
+					};
 					3C8DD1D728ED8CBD00C5DA63 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -136,11 +188,19 @@
 			projectRoot = "";
 			targets = (
 				3C8DD1D728ED8CBD00C5DA63 /* PositiveToNegativeTimerDemo */,
+				3C2BA85228F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C2BA85128F15E7C00BBB215 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C8DD1D628ED8CBD00C5DA63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +213,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C2BA84F28F15E7C00BBB215 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2BA85628F15E7C00BBB215 /* PositiveToNegativeTimerDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3C8DD1D428ED8CBD00C5DA63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,7 +236,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3C2BA85828F15E7C00BBB215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C8DD1D728ED8CBD00C5DA63 /* PositiveToNegativeTimerDemo */;
+			targetProxy = 3C2BA85728F15E7C00BBB215 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		3C2BA85928F15E7C00BBB215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.PositiveToNegativeTimerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PositiveToNegativeTimerDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PositiveToNegativeTimerDemo";
+			};
+			name = Debug;
+		};
+		3C2BA85A28F15E7C00BBB215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99M75C322U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.knight.PositiveToNegativeTimerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PositiveToNegativeTimerDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PositiveToNegativeTimerDemo";
+			};
+			name = Release;
+		};
 		3C8DD1E428ED8CBF00C5DA63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,6 +456,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C2BA85B28F15E7C00BBB215 /* Build configuration list for PBXNativeTarget "PositiveToNegativeTimerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2BA85928F15E7C00BBB215 /* Debug */,
+				3C2BA85A28F15E7C00BBB215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3C8DD1D328ED8CBD00C5DA63 /* Build configuration list for PBXProject "PositiveToNegativeTimerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
